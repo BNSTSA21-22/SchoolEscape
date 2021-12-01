@@ -1,6 +1,8 @@
 # School Escape!
 
-### The zombie apocalypse has begun, but you're stuck at school!  Escape the leprous lunchlady, jaundiced jock, and nefarious nurse and manage to get home.
+### The zombie apocalypse has begun, but you're stuck at school!
+Escape the leprous lunchlady, jaundiced jock, and nefarious nurse and manage to get home.
+Can you do it? Can you survive? Find out now!
 
 ### Backgrounds
 
