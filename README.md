@@ -14,9 +14,9 @@ Can you do it? Can you survive? Find out now!
 
 ### Characters
 
-[Player (Boy)](https://assetstore.unity.com/packages/2d/characters/skater-boy-character-137207)
+[Skater Boy](https://assetstore.unity.com/packages/2d/characters/skater-boy-character-137207)
 
-[Player (Girl)](https://assetstore.unity.com/packages/2d/characters/skater-girl-2d-character-sprites-spine-163121)
+[Skater Girl](https://assetstore.unity.com/packages/2d/characters/skater-girl-2d-character-sprites-spine-163121)
 
 [Lunch Lady (Level 1)](https://assetstore.unity.com/packages/2d/characters/female-zombie-01-character-sprites-spine-192033)
 
