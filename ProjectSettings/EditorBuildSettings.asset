@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Character Selection.unity
+    guid: eecd81a58e7f4490ea27be8574fb956b
+  - enabled: 1
     path: Assets/Scenes/Locker Room.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

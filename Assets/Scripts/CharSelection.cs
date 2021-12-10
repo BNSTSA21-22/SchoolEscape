@@ -37,7 +37,7 @@ public class CharSelection : MonoBehaviour
     {
         playerObjects[selectedCharacter].SetActive(false);
         selectedCharacter--;
-        if (selectedCharacter >= playerObjects.Length)
+        if (selectedCharacter < 0)
         {
             selectedCharacter = playerObjects.Length-1;
         }
@@ -59,5 +59,23 @@ public class CharSelection : MonoBehaviour
         selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
 
         playerObjects[selectedCharacter].SetActive(true);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            NextCharacter();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            PreviousCharacter();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartGame();
+        }
     }
 }
