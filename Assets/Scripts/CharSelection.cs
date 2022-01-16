@@ -22,20 +22,25 @@ public class CharSelection : MonoBehaviour
         }
     }
 
-    public void ChangeChar(int num)
+    public void NextCharacter()
     {
         playerObjects[selectedCharacter].SetActive(false);
-        selectedCharacter = selectedCharacter + num;
-        if (selectedCharacter < 0)
-        {
-            selectedCharacter = playerObjects.Length-1;
-        }
-
+        selectedCharacter++;
         if (selectedCharacter >= playerObjects.Length)
         {
             selectedCharacter = 0;
         }
+        playerObjects[selectedCharacter].SetActive(true);
+    }
 
+    public void PreviousCharacter()
+    {
+        playerObjects[selectedCharacter].SetActive(false);
+        selectedCharacter--;
+        if (selectedCharacter < 0)
+        {
+            selectedCharacter = playerObjects.Length-1;
+        }
         playerObjects[selectedCharacter].SetActive(true);
     }
 
@@ -58,17 +63,17 @@ public class CharSelection : MonoBehaviour
 
     void Update()
     {
-        bool RightDown = Input.GetKeyDown(KeyCode.RightArrow);
-        bool LeftDown = Input.GetKeyDown(KeyCode.LeftArrow);
-        bool SpaceDown = Input.GetKeyDown(KeyCode.Space);
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            NextCharacter();
+        }
 
-        if (RightDown)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ChangeChar(1);
-        } else if (LeftDown)
-        {
-            ChangeChar(-1);
-        } else if (SpaceDown)
+            PreviousCharacter();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGame();
         }
