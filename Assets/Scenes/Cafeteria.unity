@@ -396,6 +396,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 7}
   m_EdgeRadius: 0
+--- !u!114 &510562421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510562419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25dcbde54768fb4189de44ffc821921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
 --- !u!50 &510562424
 Rigidbody2D:
   serializedVersion: 4
@@ -416,7 +429,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!1 &922195794
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +737,10 @@ PrefabInstance:
     - target: {fileID: 2484611178549914861, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484611178549914862, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2484611178549914862, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
       propertyPath: m_Size.x
