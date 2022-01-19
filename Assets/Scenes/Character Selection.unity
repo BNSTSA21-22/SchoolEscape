@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObjects:
-  - {fileID: 2087997852}
   - {fileID: 853578137}
+  - {fileID: 2087997852}
   selectedCharacter: 0
   gameScene: Cafeteria
 --- !u!1 &853578137
