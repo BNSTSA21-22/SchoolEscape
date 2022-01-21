@@ -24,8 +24,13 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveToPlayer();
-        AnimatePlayer();
+        if (!anim.GetBool(ATTACK_ANIMATION))
+        {
+            MoveToPlayer();
+            AnimatePlayer();
+
+        }
+ 
  
     }
     void MoveToPlayer() {
