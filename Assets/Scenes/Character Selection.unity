@@ -251,10 +251,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537603840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.07, y: 0.14, z: 0}
+  m_LocalScale: {x: 1.1015, y: 1.1015, z: 1.1015}
   m_Children: []
-  m_Father: {fileID: 2076626364}
+  m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &537603842
@@ -272,7 +272,7 @@ MonoBehaviour:
   playerObjects:
   - {fileID: 206849441}
   - {fileID: 49325198}
-  selectedCharacter: 0
+  selectedCharacter: 1
   gameScene: Cafeteria
 --- !u!1 &1323436313
 GameObject:
@@ -338,7 +338,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477558616
 GameObject:
@@ -590,7 +590,6 @@ RectTransform:
   m_Children:
   - {fileID: 1477558617}
   - {fileID: 1607538260}
-  - {fileID: 537603841}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -629,7 +628,7 @@ Transform:
   - {fileID: 49325199}
   - {fileID: 206849443}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1833078415990217239
 PrefabInstance:
@@ -686,6 +685,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Girl
       objectReference: {fileID: 0}
+    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
+      propertyPath: m_Size.x
+      value: 4.599699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
+      propertyPath: m_Size.y
+      value: 8.1334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.038564682
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.375045
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
 --- !u!1001 &8475714176725838747
@@ -695,6 +710,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2108708938}
     m_Modifications:
+    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
+      propertyPath: m_Size.x
+      value: 5.6457243
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
+      propertyPath: m_Size.y
+      value: 8.208568
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
+      propertyPath: m_Offset.x
+      value: -2.2600336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.7201823
+      objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644600, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -739,9 +770,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8475714176921644601, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644602, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_Name
       value: Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475714176921644602, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
