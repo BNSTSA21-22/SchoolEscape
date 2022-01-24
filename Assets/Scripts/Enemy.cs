@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,26 +14,41 @@ public class Enemy : MonoBehaviour
     private float movementForce = 10f;
     private float movementX;
     private SpriteRenderer sr;
+
+    // Health system variables
+    [SerializeField]
+    private Slider healthBar;
+    private float maxHealth = 100f;
+    private float currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
         sr = GetComponent<SpriteRenderer>();
+
+        // Setup health system
+        currentHealth = maxHealth;
+        healthBar.maxValue = maxHealth;
+        healthBar.value = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!anim.GetBool(ATTACK_ANIMATION))
+        if (currentHealth <= 0)
+        {
+            anim.SetBool(ATTACK_ANIMATION, false);
+            anim.SetBool(RUN_ANIMATION, false);
+            anim.SetBool("Dying", true);
+        } else if (!anim.GetBool(ATTACK_ANIMATION))
         {
             MoveToPlayer();
             AnimatePlayer();
-
         }
- 
- 
     }
+
     void MoveToPlayer() {
         if (transform.position.x > player.position.x)
         {
@@ -75,5 +91,12 @@ public class Enemy : MonoBehaviour
             anim.SetBool(ATTACK_ANIMATION, false);
             anim.SetBool(RUN_ANIMATION, true);
         }
+    }
+
+    // Invoked from animation event.
+    void UpdateHealth()
+    {
+        currentHealth = currentHealth - 10;
+        healthBar.value = currentHealth;
     }
 }
