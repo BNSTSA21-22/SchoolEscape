@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Enemy : MonoBehaviour
     private Slider healthBar;
     private float maxHealth = 100f;
     private float currentHealth;
+    [SerializeField]
+    private int nextLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -99,4 +102,15 @@ public class Enemy : MonoBehaviour
         currentHealth = currentHealth - 10;
         healthBar.value = currentHealth;
     }
+
+
+
+
+
+
+
+
+void NextLevel() {
+    SceneManager.LoadScene(nextLevel);
+}
 }
