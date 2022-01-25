@@ -16,10 +16,9 @@ public class GameControl : MonoBehaviour
     public GameObject[] characters;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
-        Debug.Log(selectedCharacter);
         playerObject = Instantiate(characters[selectedCharacter],PlayerStartPosition.position, characters[selectedCharacter].transform.rotation);    
     }
 }

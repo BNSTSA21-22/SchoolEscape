@@ -272,7 +272,7 @@ MonoBehaviour:
   playerObjects:
   - {fileID: 206849441}
   - {fileID: 49325198}
-  selectedCharacter: 1
+  selectedCharacter: 0
   gameScene: Cafeteria
 --- !u!1 &1323436313
 GameObject:
@@ -625,8 +625,8 @@ Transform:
   m_LocalPosition: {x: 1, y: 2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
-  - {fileID: 49325199}
   - {fileID: 206849443}
+  - {fileID: 49325199}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -639,15 +639,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1833078415955656344, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1833078415955656344, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1833078415955656344, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1833078415955656344, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -685,22 +685,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Girl
       objectReference: {fileID: 0}
-    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
-      propertyPath: m_Size.x
-      value: 4.599699
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
-      propertyPath: m_Size.y
-      value: 8.1334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.038564682
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694111898830751485, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.375045
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce13a437a64c2942ab14517d66727cd, type: 3}
 --- !u!1001 &8475714176725838747
@@ -710,25 +694,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2108708938}
     m_Modifications:
-    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
-      propertyPath: m_Size.x
-      value: 5.6457243
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
-      propertyPath: m_Size.y
-      value: 8.208568
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
-      propertyPath: m_Offset.x
-      value: -2.2600336
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080346748613071209, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.7201823
-      objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644600, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644600, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_LocalPosition.x
@@ -736,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644600, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644600, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_LocalPosition.z
@@ -770,17 +738,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8475714176921644601, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8475714176921644602, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
       propertyPath: m_Name
       value: Boy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8475714176921644602, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 394be1d35292afe4b9a7891f5cb59970, type: 3}
