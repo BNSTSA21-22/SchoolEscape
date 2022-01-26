@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -11,19 +12,25 @@ public class Player : MonoBehaviour
     private float jumpForce = 10f;
     private Rigidbody2D rb;
 
+    private bool allowMovement = true;
 
   // Start is called before the first frame update
     void Start()
     {
-        
+        if(SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Character Selection"))
+        {
+            allowMovement = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveWithKeyboardInput();
-        AnimatePlayer();
-        Jump();
+        if(allowMovement) {
+            MoveWithKeyboardInput();
+            AnimatePlayer();
+            Jump();
+        }
     }
 
 
