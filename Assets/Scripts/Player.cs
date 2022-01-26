@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -12,21 +13,41 @@ public class Player : MonoBehaviour
     private float jumpForce = 10f;
     private Rigidbody2D rb;
 
+    private string RUN_ANIMATION = "running";
+    private string ATTACK_ANIMATION = "Attacking";
+    private string HIT_ANIMATION = "Hitting";
+
     private bool allowMovement = true;
+
+    [SerializeField]
+    private Slider healthBar;
+    private float maxHealth = 100f;
+    private float currentHealth;
 
   // Start is called before the first frame update
     void Start()
     {
+        // Setup health system
+        currentHealth = maxHealth;
+        healthBar.maxValue = maxHealth;
+        healthBar.value = maxHealth;
+
         if(SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Character Selection"))
         {
             allowMovement = false;
+            healthBar.gameObject.SetActive(false);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(allowMovement) {
+        if (currentHealth <= 0)
+        {
+            anim.SetBool(ATTACK_ANIMATION, false);
+            anim.SetBool(RUN_ANIMATION, false);
+            anim.SetBool("Dying", true);
+        } else if (allowMovement) {
             MoveWithKeyboardInput();
             AnimatePlayer();
             Jump();
@@ -39,7 +60,6 @@ public class Player : MonoBehaviour
         movementX = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * movementForce;
     }
-    private string RUN_ANIMATION = "running";
     private Animator anim;
     
     void Awake()
@@ -73,7 +93,7 @@ public class Player : MonoBehaviour
         
     }
     
-       void Jump()
+    void Jump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -93,4 +113,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    void UpdateHealth()
+    {
+        currentHealth = currentHealth - 10;
+        healthBar.value = currentHealth;
+    }
+
+    void leave()
+    {
+        SceneManager.LoadScene("Character Selection");
+    }
 }

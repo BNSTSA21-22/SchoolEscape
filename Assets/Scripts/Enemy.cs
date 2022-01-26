@@ -117,14 +117,7 @@ public class Enemy : MonoBehaviour
         healthBar.value = currentHealth;
     }
 
-
-
-
-
-
-
-
-void NextLevel() {
-    SceneManager.LoadScene(nextLevel);
-}
+    void NextLevel() {
+        SceneManager.LoadScene(nextLevel);
+    }
 }
