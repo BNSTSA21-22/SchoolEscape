@@ -10,12 +10,14 @@ public class Enemy : MonoBehaviour
     private float speed;
     private string RUN_ANIMATION = "Running";
     private string ATTACK_ANIMATION = "Attacking";
+    private string HIT_ANIMATION = "Hitting";
     private Animator anim;
     private Transform player;
     private float movementForce = 10f;
     private float movementX;
     private SpriteRenderer sr;
-
+    [SerializeField]
+    uint damageColliderHash;
     // Health system variables
     [SerializeField]
     private Slider healthBar;
@@ -45,7 +47,7 @@ public class Enemy : MonoBehaviour
             anim.SetBool(ATTACK_ANIMATION, false);
             anim.SetBool(RUN_ANIMATION, false);
             anim.SetBool("Dying", true);
-        } else if (!anim.GetBool(ATTACK_ANIMATION))
+        } else if (!anim.GetBool(ATTACK_ANIMATION)&& !anim.GetBool ("Hitting"))
         {
             MoveToPlayer();
             AnimatePlayer();
@@ -81,18 +83,30 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetBool(RUN_ANIMATION, false);
-            anim.SetBool(ATTACK_ANIMATION, true);
+            Debug.Log("hash=" + collision.otherCollider.GetShapeHash());
+            if (collision.otherCollider.GetShapeHash() == damageColliderHash)
+            {
+                // Enemy is being hit!
+                anim.SetBool(RUN_ANIMATION, false);
+                anim.SetBool(HIT_ANIMATION, true);
+            }
+            else
+            {
+                // Enemy is attacking!
+                anim.SetBool(RUN_ANIMATION, false);
+                anim.SetBool(ATTACK_ANIMATION, true);
+            }
         }
     }
-    
-    
+
+
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             anim.SetBool(ATTACK_ANIMATION, false);
             anim.SetBool(RUN_ANIMATION, true);
+            anim.SetBool(HIT_ANIMATION, false);
         }
     }
 
