@@ -1030,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lunch Lady
       objectReference: {fileID: 0}
+    - target: {fileID: 2484611178549914848, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2484611178549914861, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
       propertyPath: m_RootOrder
       value: 3
