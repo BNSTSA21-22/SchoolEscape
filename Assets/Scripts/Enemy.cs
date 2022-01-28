@@ -8,9 +8,12 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]
     private float speed;
-    private string RUN_ANIMATION = "Running";
+
     private string ATTACK_ANIMATION = "Attacking";
+    private string DIE_ANIMATION = "Dying";
     private string HIT_ANIMATION = "Hitting";
+    private string RUN_ANIMATION = "Running";
+
     private Animator anim;
     private Transform player;
     private float movementForce = 10f;
@@ -44,10 +47,10 @@ public class Enemy : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            anim.SetBool(ATTACK_ANIMATION, false);
+            anim.SetBool(HIT_ANIMATION, false);
             anim.SetBool(RUN_ANIMATION, false);
-            anim.SetBool("Dying", true);
-        } else if (!anim.GetBool(ATTACK_ANIMATION)&& !anim.GetBool ("Hitting"))
+            anim.SetBool(DIE_ANIMATION, true);
+        } else if (!anim.GetBool(ATTACK_ANIMATION) && !anim.GetBool(HIT_ANIMATION))
         {
             MoveToPlayer();
             AnimatePlayer();
@@ -105,8 +108,8 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             anim.SetBool(ATTACK_ANIMATION, false);
-            anim.SetBool(RUN_ANIMATION, true);
             anim.SetBool(HIT_ANIMATION, false);
+            anim.SetBool(RUN_ANIMATION, true);
         }
     }
 

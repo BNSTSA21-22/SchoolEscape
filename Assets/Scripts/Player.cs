@@ -13,9 +13,10 @@ public class Player : MonoBehaviour
     private float jumpForce = 10f;
     private Rigidbody2D rb;
 
-    private string RUN_ANIMATION = "running";
     private string ATTACK_ANIMATION = "Attacking";
+    private string DIE_ANIMATION = "Dying";
     private string HIT_ANIMATION = "Hitting";
+    private string RUN_ANIMATION = "Running";
 
     private bool allowMovement = true;
 
@@ -44,9 +45,9 @@ public class Player : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            anim.SetBool(ATTACK_ANIMATION, false);
+            anim.SetBool(HIT_ANIMATION, false);
             anim.SetBool(RUN_ANIMATION, false);
-            anim.SetBool("Dying", true);
+            anim.SetBool(DIE_ANIMATION, true);
         } else if (allowMovement) {
             MoveWithKeyboardInput();
             AnimatePlayer();
