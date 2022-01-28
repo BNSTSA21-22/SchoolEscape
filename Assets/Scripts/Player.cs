@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private string DIE_ANIMATION = "Dying";
     private string HIT_ANIMATION = "Hitting";
     private string RUN_ANIMATION = "Running";
+    private string victoryAnim = "Victory";
 
     private bool allowMovement = true;
 
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
         healthBar.maxValue = maxHealth;
         healthBar.value = maxHealth;
 
-        if(SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Character Selection"))
+        if(SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Character Selection") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Victory Screen"))
         {
             allowMovement = false;
             healthBar.gameObject.SetActive(false);
@@ -152,9 +153,13 @@ public class Player : MonoBehaviour
         anim.SetBool(ATTACK_ANIMATION, true);
     }
 
-
     void leave()
     {
         SceneManager.LoadScene("Character Selection");
+    }
+
+    void idle()
+    {
+        anim.SetBool(victoryAnim, false);
     }
 }
