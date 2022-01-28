@@ -92,6 +92,7 @@ public class Enemy : MonoBehaviour
                 // Enemy is being hit!
                 anim.SetBool(RUN_ANIMATION, false);
                 anim.SetBool(HIT_ANIMATION, true);
+                StartPlayerAttack();
             }
             else
             {
@@ -123,4 +124,20 @@ public class Enemy : MonoBehaviour
     void NextLevel() {
         SceneManager.LoadScene(nextLevel);
     }
+
+    void StartPlayerAttack()
+    {
+        player.gameObject.GetComponent<Player>().Attack();
+    }
+
+    void StartHittingPlayer()
+    {
+        player.gameObject.GetComponent<Player>().StartHitting();
+    }
+
+    void StopHittingPlayer()
+    {
+        player.gameObject.GetComponent<Player>().StopHitting();
+    }
+
 }

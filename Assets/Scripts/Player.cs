@@ -48,10 +48,15 @@ public class Player : MonoBehaviour
             anim.SetBool(HIT_ANIMATION, false);
             anim.SetBool(RUN_ANIMATION, false);
             anim.SetBool(DIE_ANIMATION, true);
-        } else if (allowMovement) {
+        }
+        else if (allowMovement)
+        {
             MoveWithKeyboardInput();
-            AnimatePlayer();
+
+            if (!anim.GetBool(ATTACK_ANIMATION) && !anim.GetBool(HIT_ANIMATION)) { 
+                AnimatePlayer();
             Jump();
+        }
         }
     }
 
@@ -113,12 +118,40 @@ public class Player : MonoBehaviour
             isGrounded = true;
         }
     }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            anim.SetBool(ATTACK_ANIMATION, false);
+            anim.SetBool(HIT_ANIMATION, false);
+            anim.SetBool(RUN_ANIMATION, true);
+        }
+    }
 
-    void UpdateHealth()
+    public void StartHitting()
     {
         currentHealth = currentHealth - 10;
         healthBar.value = currentHealth;
+
+        // Player is being hit!
+        anim.SetBool(RUN_ANIMATION, false);
+        anim.SetBool(HIT_ANIMATION, true);
     }
+
+    public void StopHitting()
+    {
+        anim.SetBool(HIT_ANIMATION, false);
+        anim.SetBool(RUN_ANIMATION, true);
+    }
+
+    public void Attack()
+    {
+        // Player is attacking!
+        anim.SetBool(RUN_ANIMATION, false);
+        anim.SetBool(HIT_ANIMATION, false);
+        anim.SetBool(ATTACK_ANIMATION, true);
+    }
+
 
     void leave()
     {
