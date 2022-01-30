@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25dcbde54768fb4189de44ffc821921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.2
   damageColliderHash: 2869851820
   healthBar: {fileID: 610927108}
   nextLevel: 2
