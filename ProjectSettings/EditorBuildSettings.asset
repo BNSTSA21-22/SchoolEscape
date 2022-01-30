@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nurse's Office.unity
     guid: b8129e7e89c09480e97a7671941de179
+  - enabled: 1
+    path: Assets/Scenes/Victory Screen.unity
+    guid: bd5a3c5833d96314a89841a802ef527f
   m_configObjects: {}
