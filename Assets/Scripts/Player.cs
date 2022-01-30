@@ -129,9 +129,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void StartHitting()
+    public void StartHitting(float strength)
     {
-        currentHealth = currentHealth - 10;
+        currentHealth = currentHealth - (10 * strength);
         healthBar.value = currentHealth;
 
         // Player is being hit!

@@ -444,6 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  strength: 0.5
   damageColliderHash: 2869851820
   healthBar: {fileID: 610927108}
   nextLevel: 2

@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    [SerializeField]
+    private float strength;
+
     private string ATTACK_ANIMATION = "Attacking";
     private string DIE_ANIMATION = "Dying";
     private string HIT_ANIMATION = "Hitting";
@@ -117,7 +120,7 @@ public class Enemy : MonoBehaviour
     // Invoked from animation event.
     void UpdateHealth()
     {
-        currentHealth = currentHealth - 10;
+        currentHealth = currentHealth - (10 * (1 - speed));
         healthBar.value = currentHealth;
     }
 
@@ -132,7 +135,7 @@ public class Enemy : MonoBehaviour
 
     void StartHittingPlayer()
     {
-        player.gameObject.GetComponent<Player>().StartHitting();
+        player.gameObject.GetComponent<Player>().StartHitting(strength);
     }
 
     void StopHittingPlayer()
