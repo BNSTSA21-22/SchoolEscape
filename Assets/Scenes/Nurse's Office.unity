@@ -618,7 +618,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1015761196}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8a69482351302dd4fbaf450996885b7a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -626,7 +626,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.73, y: 12.26}
+    oldSize: {x: 13.735493, y: 12.26}
     newSize: {x: 13.73, y: 12.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -652,7 +652,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.73, y: 12.26}
+    oldSize: {x: 13.735493, y: 12.26}
     newSize: {x: 13.73, y: 12.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  strength: 2
+  strength: 1.3
   damageColliderHash: 1387658349
   healthBar: {fileID: 620355748}
   nextLevel: 4
@@ -884,6 +884,7 @@ GameObject:
   - component: {fileID: 1990917339}
   - component: {fileID: 1990917342}
   - component: {fileID: 1990917341}
+  - component: {fileID: 1990917343}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -967,7 +968,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -3.1, y: 0}
   m_SpriteTilingProperty:
@@ -1008,6 +1009,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4}
   m_EdgeRadius: 0
+--- !u!249 &1990917343
+AreaEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990917338}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGlobalAngle: 0
+  m_ForceAngle: -45
+  m_ForceMagnitude: 7
+  m_ForceVariation: 0
+  m_ForceTarget: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &2023307613
 GameObject:
   m_ObjectHideFlags: 0
