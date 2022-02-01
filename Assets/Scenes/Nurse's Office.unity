@@ -629,6 +629,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6564017584633640268, guid: 50a5b53c4987dce4698a4731ab375fa8, type: 3}
+      propertyPath: speed
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564017584633640268, guid: 50a5b53c4987dce4698a4731ab375fa8, type: 3}
+      propertyPath: strength
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6564017584633640271, guid: 50a5b53c4987dce4698a4731ab375fa8, type: 3}
       propertyPath: m_UsedByEffector
       value: 1
