@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -73,13 +74,17 @@ public class Enemy : MonoBehaviour
     }
     void AnimatePlayer()
     {
-        if (movementX > 0)
+        float diff = transform.position.x - player.position.x;
+        if (Math.Abs(diff) > 0.1)
         {
-            sr.flipX = false;
-        }
-        else
-        {
-            sr.flipX = true;
+            if (movementX > 0)
+            {
+                sr.flipX = false;
+            }
+            else
+            {
+                sr.flipX = true;
+            }
         }
         anim.SetBool(RUN_ANIMATION, true);
     }
