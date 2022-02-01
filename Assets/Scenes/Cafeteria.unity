@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 922195798}
   - component: {fileID: 922195797}
   - component: {fileID: 922195799}
+  - component: {fileID: 922195800}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -457,6 +458,32 @@ AreaEffector2D:
   m_ForceTarget: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!61 &922195800
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922195794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.26, y: 2.08}
+    newSize: {x: 6.26, y: 2.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.26, y: 2.08}
+  m_EdgeRadius: 0
 --- !u!1 &1097780376
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +600,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 510562420, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 510562427, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 510562427, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
+      propertyPath: m_ForceVariation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 684341853, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
