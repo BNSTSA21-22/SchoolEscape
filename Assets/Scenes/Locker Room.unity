@@ -421,7 +421,6 @@ GameObject:
   - component: {fileID: 1959478892}
   - component: {fileID: 1959478895}
   - component: {fileID: 1959478894}
-  - component: {fileID: 1959478896}
   - component: {fileID: 1959478897}
   m_Layer: 0
   m_Name: Background
@@ -532,7 +531,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 3.1, y: 0}
   m_SpriteTilingProperty:
@@ -547,26 +546,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4}
   m_EdgeRadius: 0
---- !u!249 &1959478896
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959478891}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 135
-  m_ForceMagnitude: 7
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!61 &1959478897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -612,7 +591,7 @@ AreaEffector2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_UseGlobalAngle: 0
-  m_ForceAngle: 45
+  m_ForceAngle: 0
   m_ForceMagnitude: 200
   m_ForceVariation: 0
   m_ForceTarget: 0
@@ -679,6 +658,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3907345014747491885, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
       propertyPath: speed
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907345014747491885, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
+      propertyPath: endurance
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3907345015585452546, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}

@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float strength;
 
+    [SerializeField]
+    private float endurance;
+
     private string ATTACK_ANIMATION = "Attacking";
     private string DIE_ANIMATION = "Dying";
     private string HIT_ANIMATION = "Hitting";
@@ -23,6 +26,8 @@ public class Enemy : MonoBehaviour
     private float movementForce = 10f;
     private float movementX;
     private SpriteRenderer sr;
+    private AreaEffector2D ae;
+
     [SerializeField]
     uint damageColliderHash;
     // Health system variables
@@ -39,6 +44,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
         sr = GetComponent<SpriteRenderer>();
+        ae = GetComponent<AreaEffector2D>();
 
         // Setup health system
         currentHealth = maxHealth;
@@ -97,6 +103,15 @@ public class Enemy : MonoBehaviour
             Debug.Log("hash=" + collision.otherCollider.GetShapeHash());
             if (collision.otherCollider.GetShapeHash() == damageColliderHash)
             {
+                if (transform.position.x < 0)
+                {
+                    ae.forceAngle = 45;
+                }
+                else
+                {
+                    ae.forceAngle = 135;
+                }
+
                 // Enemy is being hit!
                 anim.SetBool(RUN_ANIMATION, false);
                 anim.SetBool(HIT_ANIMATION, true);
@@ -125,7 +140,7 @@ public class Enemy : MonoBehaviour
     // Invoked from animation event.
     void UpdateHealth()
     {
-        currentHealth = currentHealth - (10 * (1 - speed));
+        currentHealth = currentHealth - (10 * (1 - endurance));
         healthBar.value = currentHealth;
     }
 
