@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         healthBar.maxValue = maxHealth;
         healthBar.value = maxHealth;
 
-        if(SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Character Selection") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Victory Screen"))
+        if(SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Character Selection") || SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("Victory Screen") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Death Screen"))
         {
             allowMovement = false;
             healthBar.gameObject.SetActive(false);

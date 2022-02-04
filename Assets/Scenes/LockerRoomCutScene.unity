@@ -577,6 +577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 5
   nextLevel: Locker Room
+  healthBar: {fileID: 3907345014606781960}
 --- !u!249 &1971114366
 AreaEffector2D:
   serializedVersion: 2
@@ -676,3 +677,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3907345015718436069, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
   m_PrefabInstance: {fileID: 3907345014606781958}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3907345014606781960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3907345015108248008, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
+  m_PrefabInstance: {fileID: 3907345014606781958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

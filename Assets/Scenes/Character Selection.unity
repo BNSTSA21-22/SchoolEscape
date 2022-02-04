@@ -400,7 +400,7 @@ MonoBehaviour:
   - {fileID: 206849441}
   - {fileID: 49325198}
   selectedCharacter: 0
-  gameScene: Cafeteria
+  gameScene: CafeteriaCutscene
 --- !u!1 &819781949
 GameObject:
   m_ObjectHideFlags: 0
