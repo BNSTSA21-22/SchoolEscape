@@ -6,6 +6,12 @@ public class CameraFollow : MonoBehaviour
 {
     private Transform player;
     private Vector3 tempPosition;
+
+    private Vector3 _cam;
+
+    public float CamMoveSpeed = 5f;
+    
+    public string tagName = "Player";
     // Start is called before the first frame update
 
     [SerializeField]
@@ -13,7 +19,9 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        _cam = transform.position;
+
+        player = GameObject.FindWithTag(tagName).transform;
     }
 
     // Update is called once per frame
@@ -21,9 +29,19 @@ public class CameraFollow : MonoBehaviour
     {
         tempPosition = transform.position;
         tempPosition.x = player.position.x;
-        if (tempPosition.x < minX)
-        { tempPosition.x = minX; }
-        else if (tempPosition.x > maxX) { tempPosition.x = maxX; }
-        transform.position = tempPosition;
+
+        float x = tempPosition.x;
+        float y = tempPosition.y;
+        float z = tempPosition.z;
+
+        if(x < minX) {
+            x = minX;
+        } else if(x > maxX) {
+            x = maxX;
+        }
+
+        _cam = new Vector3(x, y, z);
+
+        transform.position = Vector3.Lerp(transform.position, _cam, CamMoveSpeed * Time.deltaTime);
     }
 }
