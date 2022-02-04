@@ -14,7 +14,9 @@ public class SceneChange : MonoBehaviour
 
     void Start()
     {
-        healthBar.gameObject.SetActive(false);
+        if (healthBar != null) {
+            healthBar.gameObject.SetActive(false);
+        }
 
         StartCoroutine(LoadLevel());
     }
