@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private string HIT_ANIMATION = "Hitting";
     private string RUN_ANIMATION = "Running";
     private string victoryAnim = "Victory";
+    private string DEAD_ANIMATION = "Dead";
 
     private bool allowMovement = true;
 
@@ -155,11 +156,12 @@ public class Player : MonoBehaviour
 
     void leave()
     {
-        SceneManager.LoadScene("Character Selection");
+        SceneManager.LoadScene("Death Screen");
     }
 
     void idle()
     {
         anim.SetBool(victoryAnim, false);
+        anim.SetBool(DEAD_ANIMATION, false);
     }
 }

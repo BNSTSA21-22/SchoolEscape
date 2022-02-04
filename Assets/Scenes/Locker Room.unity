@@ -756,6 +756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jock
       objectReference: {fileID: 0}
+    - target: {fileID: 3907345014747491885, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
+      propertyPath: nextLevel
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3907345015585452546, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

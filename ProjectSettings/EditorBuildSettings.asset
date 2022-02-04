@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Character Selection.unity
     guid: eecd81a58e7f4490ea27be8574fb956b
   - enabled: 1
+    path: Assets/Scenes/CafeteriaCutscene.unity
+    guid: e4cc144dc082740388a20935b0ed8e9d
+  - enabled: 1
     path: Assets/Scenes/Cafeteria.unity
     guid: 1d5e491e7018043f39e49cd7b726816f
   - enabled: 1
+    path: Assets/Scenes/LockerRoomCutScene.unity
+    guid: 3ae0fe8d3ec644975ab3b000a7b8cbcb
+  - enabled: 1
     path: Assets/Scenes/Locker Room.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/NursesOfficeCutScene.unity
+    guid: 759b3b6df1bf040dc93d707e2bc748e4
   - enabled: 1
     path: Assets/Scenes/Nurse's Office.unity
     guid: b8129e7e89c09480e97a7671941de179
