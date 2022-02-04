@@ -15,6 +15,8 @@ public class Victory : MonoBehaviour
 
     private string victoryAnim = "Victory";
 
+    public string menuScene = "Character Selection";
+
     int selectedCharacter;
 
     private GameObject playerObject;
@@ -37,5 +39,13 @@ public class Victory : MonoBehaviour
     void Start()
     {
         anim.SetBool(victoryAnim, true);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(menuScene);
+        }
     }
 }
