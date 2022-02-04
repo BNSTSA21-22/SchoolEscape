@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 3907345014747491884}
   - component: {fileID: 3907345014747491885}
   - component: {fileID: 3907345014747491882}
+  - component: {fileID: 1971114366}
   m_Layer: 0
   m_Name: Jock
   m_TagString: Enemy
@@ -279,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
   strength: 1
+  endurance: 0.5
   damageColliderHash: 172923878
   healthBar: {fileID: 3907345015108248008}
   nextLevel: 3
@@ -291,9 +293,9 @@ BoxCollider2D:
   m_GameObject: {fileID: 3907345014747491875}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8a69482351302dd4fbaf450996885b7a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.5, y: 3.8}
   m_SpriteTilingProperty:
@@ -308,6 +310,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.2}
   m_EdgeRadius: 0
+--- !u!249 &1971114366
+AreaEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907345014747491875}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGlobalAngle: 0
+  m_ForceAngle: 0
+  m_ForceMagnitude: 200
+  m_ForceVariation: 0
+  m_ForceTarget: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &3907345015108248011
 GameObject:
   m_ObjectHideFlags: 0

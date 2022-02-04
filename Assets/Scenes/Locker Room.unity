@@ -572,31 +572,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.26, y: 2.08}
   m_EdgeRadius: 0
---- !u!1 &1971114358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3907345014747491875, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
-  m_PrefabInstance: {fileID: 3907345014606781958}
-  m_PrefabAsset: {fileID: 0}
---- !u!249 &1971114366
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971114358}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 200
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!1001 &3907345014606781958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -651,18 +626,6 @@ PrefabInstance:
     - target: {fileID: 3907345014747491875, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
       propertyPath: m_Name
       value: Jock
-      objectReference: {fileID: 0}
-    - target: {fileID: 3907345014747491882, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
-      propertyPath: m_UsedByEffector
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3907345014747491885, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
-      propertyPath: speed
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3907345014747491885, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
-      propertyPath: endurance
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3907345015585452546, guid: 3d5fa593dfd074b4f941e68dee2e3719, type: 3}
       propertyPath: m_AnchorMax.y

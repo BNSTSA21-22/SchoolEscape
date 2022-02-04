@@ -579,26 +579,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 510562420, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 510562421, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
-      propertyPath: endurance
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 510562427, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
-      propertyPath: m_ForceAngle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 510562427, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 510562427, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
-      propertyPath: m_ForceVariation
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 684341853, guid: f3d176059e27de24fa3064ca56616f1b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
