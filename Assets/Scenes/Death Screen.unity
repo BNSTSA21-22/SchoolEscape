@@ -223,10 +223,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Congratulations, you have escaped the school!
+  m_Text: 'You failed to stop the infection!
 
-    Press space to return
-    to the menu.'
+    Press space to return to the menu
+    and try again.'
 --- !u!222 &753216059
 CanvasRenderer:
   m_ObjectHideFlags: 0
