@@ -45,7 +45,8 @@ public class Death : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene(menuScene);
+            LoadingData.sceneToLoad = menuScene;
+            SceneManager.LoadScene("LoadingScreen");
         }
     }
 }
