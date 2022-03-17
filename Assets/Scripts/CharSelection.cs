@@ -47,7 +47,8 @@ public class CharSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-        SceneManager.LoadScene(gameScene);
+        LoadingData.sceneToLoad = gameScene;
+        SceneManager.LoadScene("LoadingScreen");
     }
 
     //startup sequence

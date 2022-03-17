@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreen : MonoBehaviour
 {
-    public void LoadScene() {
+    public int minTime = 4;
+
+    void Start() {
+        Invoke("loadThePlace", minTime);
+    }
+
+    void loadThePlace() {
         SceneManager.LoadSceneAsync(LoadingData.sceneToLoad);
     }
 }

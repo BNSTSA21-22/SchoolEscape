@@ -25,6 +25,7 @@ public class SceneChange : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene(nextLevel);
+        LoadingData.sceneToLoad = nextLevel;
+        SceneManager.LoadScene("LoadingScreen");
     }
 }

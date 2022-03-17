@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class LoadingData : MonoBehaviour
 {
-    [SerializeField] public static string sceneToLoad;
+    [SerializeField] public static string sceneToLoad = "Cafeteria";
 }
