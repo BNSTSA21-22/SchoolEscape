@@ -100,7 +100,6 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("hash=" + collision.otherCollider.GetShapeHash());
             if (collision.otherCollider.GetShapeHash() == damageColliderHash)
             {
                 if (transform.position.x < 0)
